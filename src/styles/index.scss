@@ -1,0 +1,12 @@
+@use 'reset';
+@use 'variables/global' as global;
+@use './themes/normal' as normalTheme;
+@use './themes/dark' as darkTheme;
+
+
+.app {
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+}
