@@ -1,0 +1,13 @@
+{
+    "eslint.run": "onType",
+    "stylelint.snippet": [
+        "css",
+        "postcss",
+        "scss"
+    ],
+    "stylelint.validate": [
+        "css",
+        "postcss",
+        "scss"
+    ]
+}

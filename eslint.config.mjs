@@ -3,9 +3,12 @@ import pluginJs from "@eslint/js";
 import tseslintPlugin from "@typescript-eslint/eslint-plugin";
 import tseslintParser from "@typescript-eslint/parser";
 import pluginReact from "eslint-plugin-react";
+import i18next from 'eslint-plugin-i18next';
+
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
+    i18next.configs['flat/recommended'],
     {
         files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
         languageOptions: {
