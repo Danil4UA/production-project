@@ -17,3 +17,4 @@ declare module "*.svg" {
 }
 
 declare const __IS__DEV__: boolean;
+
