@@ -11,6 +11,8 @@ export function buildLoaders({isDev}: BuildOptions):webpack.RuleSetRule[] {
         use: 'ts-loader',
         exclude: /node_modules/,
     }
+
+    
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
