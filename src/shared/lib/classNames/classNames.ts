@@ -5,7 +5,7 @@ export function classNames(cls: string, modes: Modes = {}, additional: string[] 
     return [
         cls,
         ...additional.filter(Boolean),
-        Object.entries(modes)
+        ...Object.entries(modes)
             .filter(([_, value])=> Boolean(value))
             .map(([className])=> className)
     ]

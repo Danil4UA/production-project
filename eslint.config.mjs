@@ -31,6 +31,9 @@ export default [
             "@typescript-eslint": tseslintPlugin,
             react: pluginReact,
         },
+        env: {
+          jest: true
+        },
         rules: {
             ...pluginJs.configs.recommended.rules, // JavaScript recommended rules
             ...tseslintPlugin.configs.recommended.rules, // TypeScript recommended rules
