@@ -4,5 +4,7 @@
     "Language": "Русский",
     "Navbar main page": "Главная страница",
     "Navbar about page": "О нас",
-    "Page not found": "Страница не найдена"
+    "Page not found": "Страница не найдена",
+    "Unexpected error occured": "Произошла непредвиденная ошибка",
+    "Refresh page": "Обновить страницу"
 }
