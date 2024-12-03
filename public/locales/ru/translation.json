@@ -6,5 +6,6 @@
     "Navbar about page": "О нас",
     "Page not found": "Страница не найдена",
     "Unexpected error occured": "Произошла непредвиденная ошибка",
-    "Refresh page": "Обновить страницу"
+    "Refresh page": "Обновить страницу",
+    "throwError": "Бросить ошибку"
 }
