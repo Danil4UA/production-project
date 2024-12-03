@@ -13,7 +13,6 @@ interface BugButtonProps {
 export const BugButton = ({ className }: BugButtonProps) => {
     const [error, setError] = useState(false)
     const { t } = useTranslation();
-
     const onThrow = () => {
         setError(true)
     }
