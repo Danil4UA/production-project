@@ -5,7 +5,6 @@ import tseslintParser from "@typescript-eslint/parser";
 import pluginReact from "eslint-plugin-react";
 import i18next from 'eslint-plugin-i18next';
 
-
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
     i18next.configs['flat/recommended'],
@@ -19,28 +18,24 @@ export default [
             },
             globals: {
                 ...globals.node,
+                ...globals.browser, // добавляем browser окружение
                 "localStorage": true,
                 "fetch": true,
                 "__IS__DEV__": true,
-
+                "jest": true, // для тестов jest
             },
-
-
         },
         plugins: {
             "@typescript-eslint": tseslintPlugin,
             react: pluginReact,
-        },
-        env: {
-          jest: true
         },
         rules: {
             ...pluginJs.configs.recommended.rules, // JavaScript recommended rules
             ...tseslintPlugin.configs.recommended.rules, // TypeScript recommended rules
             ...pluginReact.configs.flat.recommended.rules, // React recommended rules
             // Custom rules
-            "react/jsx-indent": [2,4],
-            indent: [2,4],
+            "react/jsx-indent": [2, 4],
+            indent: [2, 4],
             "no-unused-vars": "warn",
             "react/react-in-jsx-scope": "off",
             "@typescript-eslint/no-unused-vars": "warn",
