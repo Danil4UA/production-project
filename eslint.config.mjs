@@ -4,6 +4,7 @@ import tseslintPlugin from "@typescript-eslint/eslint-plugin";
 import tseslintParser from "@typescript-eslint/parser";
 import pluginReact from "eslint-plugin-react";
 import i18next from 'eslint-plugin-i18next';
+import pluginReactHooks from "eslint-plugin-react-hooks"; // Use import for React Hooks plugin
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
@@ -18,16 +19,17 @@ export default [
             },
             globals: {
                 ...globals.node,
-                ...globals.browser, // добавляем browser окружение
-                "localStorage": true,
-                "fetch": true,
-                "__IS__DEV__": true,
-                "jest": true, // для тестов jest
+                ...globals.browser, // Add browser environment
+                localStorage: true,
+                fetch: true,
+                __IS__DEV__: true,
+                jest: true, // For Jest tests
             },
         },
         plugins: {
             "@typescript-eslint": tseslintPlugin,
             react: pluginReact,
+            "react-hooks": pluginReactHooks, // Use imported React Hooks plugin
         },
         rules: {
             ...pluginJs.configs.recommended.rules, // JavaScript recommended rules
@@ -41,6 +43,8 @@ export default [
             "@typescript-eslint/no-unused-vars": "warn",
             "react/no-deprecated": "warn",
             "no-undef": "warn",
+            "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+            "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
         },
     },
 ];
