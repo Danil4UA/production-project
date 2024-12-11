@@ -8,6 +8,8 @@
     "Unexpected error occured": "Произошла непредвиденная ошибка",
     "Refresh page": "Обновить страницу",
     "throwError": "Бросить ошибку",
-    "Short Language": "Ру"
-
+    "Short Language": "Ру",
+    "Enter": "Вход",
+    "Enter username": "Введите логин",
+    "Enter password": "Введите пароль"
 }

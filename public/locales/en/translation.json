@@ -8,5 +8,8 @@
     "Unexpected error occured": "Unexpected error occured",
     "Refresh page": "Refresh page",
     "throwError": "throw error",
-    "Short Language": "En"
+    "Short Language": "En",
+    "Enter": "Enter",
+    "Enter username": "Enter username",
+    "Enter password": "Enter password"
 }
