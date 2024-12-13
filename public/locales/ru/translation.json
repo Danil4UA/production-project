@@ -10,6 +10,9 @@
     "throwError": "Бросить ошибку",
     "Short Language": "Ру",
     "Enter": "Вход",
+    "Exit": "Выход",
     "Enter username": "Введите логин",
-    "Enter password": "Введите пароль"
+    "Enter password": "Введите пароль",
+    "Auth form": "Форма авторизации",
+    "The data your enter is incorrect": "Вы ввели неверные данные"
 }

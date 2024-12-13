@@ -10,6 +10,9 @@
     "throwError": "throw error",
     "Short Language": "En",
     "Enter": "Enter",
+    "Exit": "Exit",
     "Enter username": "Enter username",
-    "Enter password": "Enter password"
+    "Enter password": "Enter password",
+    "Auth form": "Auth form",
+    "The data your enter is incorrect": "The data your enter is incorrect"
 }
