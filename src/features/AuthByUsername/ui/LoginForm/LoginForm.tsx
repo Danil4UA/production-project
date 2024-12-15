@@ -12,11 +12,11 @@ import { AppDispatch } from "app/providers/StoreProvider/config/store";
 import Text from "shared/ui/Text/Text";
 import { TextTheme } from "shared/ui/Text/Text";
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string;
 }
 
-export const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className }: LoginFormProps) => {
     const {t} = useTranslation()
 
     const dispatch = useDispatch<AppDispatch>()
@@ -40,7 +40,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Text title={t("Auth form")}/>
-            {error && <Text text={error} theme={TextTheme.ERROR}/>}
+            {error && <Text text={t("The data your enter is incorrect")} theme={TextTheme.ERROR}/>}
             <Input 
                 className={cls.input} 
                 type="text" 
