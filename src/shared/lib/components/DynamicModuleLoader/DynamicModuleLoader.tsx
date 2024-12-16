@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FC, useEffect } from "react";
 import { ReduxStoreWithManager } from "app/providers/StoreProvider";
 import { useDispatch, useStore } from "react-redux";
@@ -31,6 +32,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
         })
         return () => {
             if(removeAfterUnmount) {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 Object.entries(reducers).forEach(([name, reducer]: ReducerListEntry) => {
                     store.reducerManager.remove(name)
                     dispatch({type:`DESTROY ${name} reducer`})

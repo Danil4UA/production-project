@@ -49,6 +49,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Daniil",
+    "lastname": "Kapkov",
+    "age": 24,
+    "currency": "USD",
+    "country": "Israel",
+    "city": "Tel Aviv",
+    "username": "admin",
+    "avatar": "https://res.cloudinary.com/dz209s6jk/image/upload/v1665731200/Avatars/usgszxkd84qarpxt5l4i.jpg"
   }
 }

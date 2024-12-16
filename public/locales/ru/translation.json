@@ -2,8 +2,8 @@
     "Test translate": "Тестовый перевод",
     "Translate": "Перевести",
     "Language": "Русский",
-    "Navbar main page": "Главная страница",
-    "Navbar about page": "О нас",
+    "Main": "Главная страница",
+    "About": "О нас",
     "Page not found": "Страница не найдена",
     "Unexpected error occured": "Произошла непредвиденная ошибка",
     "Refresh page": "Обновить страницу",
@@ -14,5 +14,7 @@
     "Enter username": "Введите логин",
     "Enter password": "Введите пароль",
     "Auth form": "Форма авторизации",
-    "The data your enter is incorrect": "Вы ввели неверные данные"
+    "The data your enter is incorrect": "Вы ввели неверные данные",
+    "Profile": "Профиль"
+
 }
