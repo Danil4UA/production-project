@@ -23,6 +23,7 @@ export default [
                 localStorage: true,
                 fetch: true,
                 __IS__DEV__: true,
+                __API__: true,
                 jest: true, // For Jest tests
             },
         },

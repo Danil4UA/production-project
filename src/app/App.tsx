@@ -11,6 +11,7 @@ const App = () => {
     const {theme} = useTheme()
     const dispatch = useDispatch()
 
+
     useEffect(()=>{
         dispatch(userActions.initAuthData())
     }, [dispatch])
