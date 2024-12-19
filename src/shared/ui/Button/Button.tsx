@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames, Modes } from "shared/lib/classNames/classNames";
 import * as cls from "./Button.module.scss";
 import { ButtonHTMLAttributes, memo, ReactNode } from "react";
 
@@ -31,14 +31,14 @@ export const Button = memo( (props: ButtonProps) => {
     const {
         className,
         children,
-        theme,
+        theme = ThemeButton.OUTLINE,
         square,
         disabled,
         size = ButtonSize.M,
         ...otherProps
     } = props
 
-    const modes: Record<string, boolean> = {
+    const modes: Modes = {
         [cls.square]: square,
         [cls[size]]: true,
         [cls[theme]]: true,

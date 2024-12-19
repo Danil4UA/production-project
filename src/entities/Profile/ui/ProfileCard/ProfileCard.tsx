@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import { classNames } from "shared/lib/classNames/classNames";
 import * as cls from "./ProfileCard.module.scss";
 import { useTranslation } from "react-i18next";

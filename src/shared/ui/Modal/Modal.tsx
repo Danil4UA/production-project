@@ -1,5 +1,5 @@
-import React, { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
+import React, { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { classNames, Modes } from "shared/lib/classNames/classNames";
 import * as cls from "./Modal.module.scss";
 import Portal from "shared/ui/Portal/Portal";
 import { useTheme } from "app/providers/ThemeProvider";
@@ -25,7 +25,7 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false)
     const [isMounted, setIsMounted] = useState(false)
-    const timerRef = useRef<ReturnType<typeof setTimeout>>()
+    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>
     const {theme} = useTheme()
 
     useEffect(()=>{
@@ -67,14 +67,14 @@ export const Modal = (props: ModalProps) => {
         }
     }, [isOpen, onKeyDown]);
 
-    const modes: Record<string, boolean> = {
+    const modes: Modes = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     }
 
     // problem is in isMounted
     if (lazy && !isMounted) return null;
-
+ 
     return (
         <Portal>
             <div className={classNames(cls.Modal, modes, [className, theme, "app_modal" ])}>

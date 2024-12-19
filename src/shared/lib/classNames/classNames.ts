@@ -1,4 +1,4 @@
-type Modes = Record<string, boolean | string>
+export type Modes = Record<string, boolean | string | undefined>
 
 
 export function classNames(cls: string, modes: Modes = {}, additional: Array<string | undefined> = []): string {
@@ -6,6 +6,7 @@ export function classNames(cls: string, modes: Modes = {}, additional: Array<str
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(modes)
+            // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
             .filter(([_, value])=> Boolean(value))
             .map(([className])=> className)
     ]

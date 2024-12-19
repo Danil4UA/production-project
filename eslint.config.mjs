@@ -43,10 +43,10 @@ export default [
             "react/react-in-jsx-scope": "off",
             "@typescript-eslint/no-unused-vars": "warn",
             "react/no-deprecated": "warn",
-            "no-undef": "warn",
+            "no-undef": "off",
             "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
             "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
-            "react/display-name": "off"
+            "react/display-name": "off",
         },
     },
 ];
