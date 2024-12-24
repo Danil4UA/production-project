@@ -3,20 +3,21 @@ import { classNames, Modes } from "shared/lib/classNames/classNames";
 import * as cls from "./Input.module.scss";
 import { InputHTMLAttributes, memo, useEffect, useRef, useState } from "react";
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange" | "readOnly">
-interface InputProps extends HTMLInputProps{
+type HTMLInputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'value' | 'onChange' | 'readOnly'
+>;
+
+interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string | number;
-    // eslint-disable-next-line no-unused-vars
-    onChange?: (value: string)=> void;
+    onChange?: (value: string) => void;
     autofocus?: boolean;
     readonly?: boolean;
-
-}
+  }
 
 // eslint-disable-next-line react/display-name
 export const Input = memo((props: InputProps) => {
-
     const {
         className,
         value,

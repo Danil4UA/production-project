@@ -2,12 +2,14 @@
 /* eslint-disable no-unused-vars */
 import { classNames } from "shared/lib/classNames/classNames";
 import * as cls from "./ProfileCard.module.scss";
-import Button, { ThemeButton } from "shared/ui/Button/Button";
 import Text, { TextAlign, TextTheme } from "shared/ui/Text/Text";
 import Input from "shared/ui/Input/Input";
 import { Profile } from "entities/Profile/model/types/profile";
 import Loader from "shared/ui/Loader/Loader";
 import { useTranslation } from "react-i18next";
+import Avatar from "shared/ui/Avatar/Avatar";
+import { Currency, CurrencySelect } from "entities/Currency";
+import { Country, CountrySelect } from "entities/Country";
 
 interface ProfileCardProps {
     className?: string;
@@ -19,7 +21,10 @@ interface ProfileCardProps {
     onChangeLastname?: (value?:string) => void;
     onChangeAge?: (value?:string) => void;
     onChangeCity?: (value?:string) => void;
-
+    onChangeUsername?: (value?:string) => void;
+    onChangeAvatar?: (value?:string) => void;
+    onChangeCurrency?: (value?:Currency) => void;
+    onChangeCountry?: (value?:Country) => void;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -34,6 +39,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeLastname,
         onChangeAge,
         onChangeCity,
+        onChangeUsername,
+        onChangeAvatar,
+        onChangeCurrency,
+        onChangeCountry,
     }= props
 
     if(isLoading){
@@ -54,9 +63,17 @@ export const ProfileCard = (props: ProfileCardProps) => {
             </div>
         )
     }
+    const modes = {
+        [cls.editing]: !readonly,
+    }
     return (
-        <div className={classNames(cls.ProfileCard, {}, [className])}>
+        <div className={classNames(cls.ProfileCard, modes, [className])}>
             <div>
+                {data?.avatar &&
+                    <div className={cls.avatarWrapper}>
+                        <Avatar src={data.avatar} />
+                    </div>
+                }
                 <Input 
                     value={data?.first}
                     placeholder={t("Your firstname")}
@@ -80,6 +97,30 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     value={data?.city}
                     placeholder={t("City")}
                     onChange={onChangeCity}
+                    readonly={readonly}
+                />
+                <Input 
+                    value={data?.username}
+                    placeholder={t("Username")}
+                    onChange={onChangeUsername}
+                    readonly={readonly}
+                />
+                <Input 
+                    value={data?.avatar}
+                    placeholder={t("Avatar")}
+                    onChange={onChangeAvatar}
+                    readonly={readonly}
+                />
+                <CurrencySelect 
+                    className={cls.input}
+                    value={data?.currency} 
+                    onChange={onChangeCurrency} 
+                    readonly={readonly}
+                />
+                <CountrySelect
+                    className={cls.input}
+                    value={data?.country} 
+                    onChange={onChangeCountry} 
                     readonly={readonly}
                 />
             </div>
