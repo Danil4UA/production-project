@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { memo, useCallback } from "react";
 import { Country } from "../../types/country";
 import { classNames } from "shared/lib/classNames/classNames";
@@ -18,9 +19,13 @@ export const CountrySelect = memo( ({ className, value, onChange, readonly }: Co
         {value: Country.Ukraine, content: Country.Ukraine},
     ]
 
-    const onChangeHandler = useCallback(()=>{
-        onChange?.(value as Country)
-    }, [onChange, value])
+    const onChangeHandler = useCallback(
+        (value: string) => {
+            if (onChange) onChange(value as Country);
+        },
+        [onChange, value],
+    );
+
     return (
         <Select 
             className={classNames("", {}, [className])} 

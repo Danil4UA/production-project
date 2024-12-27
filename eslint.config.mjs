@@ -39,7 +39,7 @@ export default [
             // Custom rules
             "react/jsx-indent": [2, 4],
             indent: [2, 4],
-            "no-unused-vars": "warn",
+            "no-unused-vars": "off",
             "react/react-in-jsx-scope": "off",
             "@typescript-eslint/no-unused-vars": "warn",
             "react/no-deprecated": "warn",

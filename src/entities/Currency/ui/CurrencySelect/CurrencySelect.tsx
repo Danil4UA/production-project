@@ -18,9 +18,12 @@ export const CurrencySelect = memo( ({ className, value, onChange, readonly }: C
         {value: Currency.USD, content: Currency.USD},
     ]
 
-    const onChangeHandler = useCallback(()=>{
-        onChange?.(value as Currency)
-    }, [onChange, value])
+    const onChangeHandler = useCallback((value: string) => {
+        if(onChange) onChange(value as Currency);
+    }, 
+    [onChange] 
+    );
+
     return (
         <Select 
             className={classNames("", {}, [className])} 
