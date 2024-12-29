@@ -2,7 +2,7 @@
 @use 'variables/global' as global;
 @use './themes/normal' as normalTheme;
 @use './themes/dark' as darkTheme;
-
+@use './themes/orange.scss' as orangeTheme;
 
 .app,
 .app_modal {
