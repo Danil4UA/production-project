@@ -49,11 +49,11 @@
     }
   ],
   "profile": {
-    "first": "Daniil",
+    "first": "Daniel",
     "lastname": "Kapkov",
     "age": 24,
-    "currency": "ILS",
-    "country": "Israel",
+    "currency": "USD",
+    "country": "USA",
     "city": "Tel Aviv",
     "username": "admin",
     "avatar": "https://res.cloudinary.com/dz209s6jk/image/upload/v1665731200/Avatars/usgszxkd84qarpxt5l4i.jpg"
